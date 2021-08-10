@@ -32,7 +32,7 @@ export const requestLoan =
         },
       };
       const { data } = await axios.post(
-        "/*",
+        "https://cors-anywhere.herokuapp.com/https://ussouthcentral.services.azureml.net/workspaces/24c3de193e72497b90fc052e118feb38/services/4e30c6fde80b4f7eacf3c97cdc0da201/execute?api-version=2.0&details=true",
         {
           Inputs: {
             input1: {
