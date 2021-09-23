@@ -1,9 +1,9 @@
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from= "/api"
+  to ="https://ussouthcentral.services.azureml.net/workspaces/fcf5daff29fa4260a9781506c2684f2b/services/3e790412571b401f8c57636458d86836/execute?api-version=2.0&format=swagger"
+  
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
