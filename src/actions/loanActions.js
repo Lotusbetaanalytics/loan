@@ -28,12 +28,13 @@ export const requestLoan =
       const config = {
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin":
+            "https://ussouthcentral.services.azureml.net/workspaces/fcf5daff29fa4260a9781506c2684f2b/services/3e790412571b401f8c57636458d86836/execute?api-version=2.0&format=swagger",
           Authorization: `Bearer fqb1+6Xh66x8xcL54m/AcW+V0S+GDBpYiSohUr5oLgOzOJV8jg/JdeXq3Xr8CuuYAA5g+XK7TTQ25LS1LrT3Fg==`,
         },
       };
       const { data } = await axios.post(
-        "/api",
+        "https://ussouthcentral.services.azureml.net/workspaces/fcf5daff29fa4260a9781506c2684f2b/services/3e790412571b401f8c57636458d86836/execute?api-version=2.0&format=swagger",
         {
           Inputs: {
             input1: {
