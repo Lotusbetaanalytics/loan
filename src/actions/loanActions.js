@@ -33,7 +33,7 @@ export const requestLoan =
         },
       };
       const { data } = await axios.post(
-        "/",
+        "/api",
         {
           Inputs: {
             input1: {
