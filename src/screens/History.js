@@ -9,6 +9,7 @@ import Loading from "./Loading";
 const CreditHistory = ({ history }) => {
   const [credit, setCredit] = useState("");
   const [property, setProperty] = useState("");
+  const [status, setStatus] = useState("");
   const [msg, setMsg] = useState(false);
 
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ const CreditHistory = ({ history }) => {
       const Credit_History = credit;
       const Property_Area = property;
       const Loan_ID = "LP001002";
+      const Loan_Status = status;
 
       dispatch(
         requestLoan(
@@ -46,7 +48,8 @@ const CreditHistory = ({ history }) => {
           LoanAmount,
           Loan_Amount_Term,
           Credit_History,
-          Property_Area
+          Property_Area,
+          Loan_Status
         )
       );
 
@@ -102,6 +105,18 @@ const CreditHistory = ({ history }) => {
                   <option value="Urban"> Urban</option>
                   <option value="Rural"> Rural</option>
                   <option value="SemiUbarn"> SemiUbarn</option>
+                </select>
+              </div>
+              <div className={styles.inputContainer}>
+                <label>Are you going to pay back your loan</label>
+                <select
+                  onChange={(e) => setStatus(e.target.value)}
+                  value={status}
+                  className="form-control"
+                >
+                  <option>Select .....</option>
+                  <option value="Y"> Yes</option>
+                  <option value="N">No</option>
                 </select>
               </div>
               <div className={styles.inputContainer}>

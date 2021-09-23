@@ -18,7 +18,8 @@ export const requestLoan =
     LoanAmount,
     Loan_Amount_Term,
     Credit_History,
-    Property_Area
+    Property_Area,
+    Loan_Status
   ) =>
   async (dispatch) => {
     try {
@@ -28,11 +29,11 @@ export const requestLoan =
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
-          Authorization: `Bearer XApKWTjLP0WWUFiilCu2RCOh1VNjD9B5LJ43RP7Fl34Lnu4SUscRuWWVuOui2rz0OryLE1HwYDiuZG7bMr9l5Q==`,
+          Authorization: `Bearer fqb1+6Xh66x8xcL54m/AcW+V0S+GDBpYiSohUr5oLgOzOJV8jg/JdeXq3Xr8CuuYAA5g+XK7TTQ25LS1LrT3Fg==`,
         },
       };
       const { data } = await axios.post(
-        "https://cors-anywhere.herokuapp.com/https://ussouthcentral.services.azureml.net/workspaces/24c3de193e72497b90fc052e118feb38/services/4e30c6fde80b4f7eacf3c97cdc0da201/execute?api-version=2.0&details=true",
+        "/",
         {
           Inputs: {
             input1: {
@@ -49,6 +50,7 @@ export const requestLoan =
                 "Loan_Amount_Term",
                 "Credit_History",
                 "Property_Area",
+                "Loan_Status",
               ],
               Values: [
                 [
@@ -64,6 +66,7 @@ export const requestLoan =
                   Loan_Amount_Term,
                   Credit_History,
                   Property_Area,
+                  Loan_Status,
                 ],
               ],
             },
@@ -72,8 +75,6 @@ export const requestLoan =
         },
         config
       );
-
-      console.log(data);
 
       dispatch({
         type: USER_LOAN_SUCCESS,
