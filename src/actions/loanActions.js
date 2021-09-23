@@ -33,7 +33,7 @@ export const requestLoan =
         },
       };
       const { data } = await axios.post(
-        "https://ussouthcentral.services.azureml.net/workspaces/fcf5daff29fa4260a9781506c2684f2b/services/3e790412571b401f8c57636458d86836/execute?api-version=2.0&format=swagger",
+        "/",
         {
           Inputs: {
             input1: {
