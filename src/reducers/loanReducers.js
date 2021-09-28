@@ -10,7 +10,11 @@ export const userLoanReducer = (state = { result: {} }, action) => {
     case USER_LOAN_REQUEST:
       return { loading: true };
     case USER_LOAN_SUCCESS:
-      return { loading: false, success: true, result: action.payload.Results };
+      return {
+        loading: false,
+        success: true,
+        result: action.payload.Results.output1[0],
+      };
     case USER_LOAN_FAIL:
       return { loading: false, error: action.payload };
     case USER_LOAN_RESET:

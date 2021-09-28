@@ -16,7 +16,7 @@ const Success = ({ history }) => {
       history.push("/");
     }
   }, [history, success]);
-  const response = result && result.output1.value.Values[0][1];
+  const response = result && result["Scored Probabilities"];
 
   const goBack = () => {
     dispatch({ type: USER_LOAN_RESET });
