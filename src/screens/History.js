@@ -5,12 +5,14 @@ import styles from "./styles.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { requestLoan } from "../actions/loanActions";
 import Loading from "./Loading";
+import Navigation from "../components/Navigation";
 
 const CreditHistory = ({ history }) => {
   const [credit, setCredit] = useState("");
   const [property, setProperty] = useState("");
-  const [status, setStatus] = useState("");
+
   const [msg, setMsg] = useState(false);
+  const status = "Y";
 
   const dispatch = useDispatch();
 
@@ -72,6 +74,7 @@ const CreditHistory = ({ history }) => {
   }
   return (
     <div>
+      <Navigation />
       <Hero bg={styles.bg4}>
         <div className={styles.forms}>
           {error && <div className="alert alert-danger">{error}</div>}
@@ -107,7 +110,7 @@ const CreditHistory = ({ history }) => {
                   <option value="SemiUbarn"> SemiUbarn</option>
                 </select>
               </div>
-              <div className={styles.inputContainer}>
+              {/* <div className={styles.inputContainer}>
                 <label>Are you going to pay back your loan</label>
                 <select
                   onChange={(e) => setStatus(e.target.value)}
@@ -118,7 +121,7 @@ const CreditHistory = ({ history }) => {
                   <option value="Y"> Yes</option>
                   <option value="N">No</option>
                 </select>
-              </div>
+              </div> */}
               <div className={styles.inputContainer}>
                 <input
                   type="submit"

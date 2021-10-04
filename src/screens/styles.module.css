@@ -27,11 +27,13 @@
     height: auto;
     display: block;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.6);
+    /* background: rgba(255, 255, 255, 0.6); */
+    background: white;
 }
 
 .lbanColor {
-    background: #650AD3;
+    /* background: #650AD3; */
+    background: #64BA37;
     color: white;
     border-radius: 20px;
 }
@@ -54,7 +56,7 @@
 }
 
 label {
-    color: #650AD3;
+    color: #64BA37;
     font-weight: bold;
     font-size: 20px;
     padding-left: 1rem;

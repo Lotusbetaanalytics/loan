@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BottomTab from "../components/BottomTab";
 import Hero from "../components/Hero";
+import Navigation from "../components/Navigation";
 import styles from "./styles.module.css";
 
 const ApplicantIncomeScreen = ({ history }) => {
@@ -22,6 +23,7 @@ const ApplicantIncomeScreen = ({ history }) => {
   };
   return (
     <div>
+      <Navigation />
       <Hero bg={styles.bg2}>
         <div className={styles.forms}>
           {msg && (
@@ -29,6 +31,7 @@ const ApplicantIncomeScreen = ({ history }) => {
           )}
           <div className={styles.inputContainer}>
             <label>Applicant Income</label>
+
             <input
               type="number"
               onChange={(e) => setIncome(e.target.value)}

@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import styles from "./styles.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { USER_LOAN_RESET } from "../constants/loanConstants";
+import Navigation from "../components/Navigation";
 
 const Success = ({ history }) => {
   const loan = useSelector((state) => state.loan);
@@ -25,6 +26,7 @@ const Success = ({ history }) => {
 
   return (
     <div>
+      <Navigation />
       <Hero bg={styles.bg2}>
         {response <= "0.69" ? (
           <div className={styles.forms}>

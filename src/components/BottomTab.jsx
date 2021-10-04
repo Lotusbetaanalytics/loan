@@ -26,7 +26,7 @@ const BottomTab = () => {
 
             </div>
             <div className={styles.bottomTab}>
-                <p>Lotus Beta Analytics</p>
+                <p style={{ textAlign: "center" }}>Powered By Lotus Beta Analytics</p>
             </div>
         </div>
     )

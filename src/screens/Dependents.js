@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BottomTab from "../components/BottomTab";
 import Hero from "../components/Hero";
+import Navigation from "../components/Navigation";
 import styles from "./styles.module.css";
 
 const Dependents = ({ history }) => {
@@ -24,6 +25,7 @@ const Dependents = ({ history }) => {
   };
   return (
     <div>
+      <Navigation />
       <Hero bg={styles.bg3}>
         <div className={styles.forms}>
           {msg && (
